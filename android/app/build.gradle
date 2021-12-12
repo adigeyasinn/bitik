@@ -6,7 +6,7 @@ if (localPropertiesFile.exists()) {
     }
 }
 
-apply plugin: 'com.google.gms.google-services'
+
 
 def flutterRoot = localProperties.getProperty('flutter.sdk')
 if (flutterRoot == null) {
@@ -22,7 +22,7 @@ def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
-
+apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
@@ -46,7 +46,7 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.bitik_mobile_app"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 30
         multiDexEnabled true
         versionCode flutterVersionCode.toInteger()
